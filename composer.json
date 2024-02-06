@@ -1,0 +1,19 @@
+{
+    "name": "kreatif/pos-virtuale-banca",
+    "description": "POS Virtuale Banca",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PosVirtualeBanca\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "PosVirtualeBanca\\PosVirtualeBanca",
+        "label": {
+            "de-DE": "POS Virtuale Banca",
+            "en-GB": "POS Virtuale Banca"
+        }
+    }
+}
