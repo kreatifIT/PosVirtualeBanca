@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>Live Credentials</title>
+
+        <input-field type="text">
+            <name>terminalID</name>
+            <label>Terminal ID:</label>
+        </input-field>
+        <input-field type="text">
+            <name>signature</name>
+            <label>Signature:</label>
+        </input-field>
+        <input-field type="text">
+            <name>paymentServerUrl</name>
+            <label>Payment server URL:</label>
+        </input-field>
+    </card>
+    <card>
+        <title>Testmodus:</title>
+        <input-field type="bool">
+            <name>IfgsUseSandbox</name>
+            <label>Verwende die Sandbox-Daten (Testmodus)</label>
+        </input-field>
+        <input-field type="text">
+            <name>sandboxTerminalID</name>
+            <label>SHOP-ID / MID:</label>
+        </input-field>
+        <input-field type="text">
+            <name>sandboxSignature</name>
+            <label>MAC_KEY_REDIRECT / Chiave Avvio:</label>
+        </input-field>
+        <input-field type="text">
+            <name>sandboxPaymentServerUrl</name>
+            <label>Payment server URL:</label>
+        </input-field>
+    </card>
+</config>

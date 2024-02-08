@@ -6,5 +6,25 @@
 
     <services>
 
+        <service id="PosVirtualeBanca\Service\PosVirtualeBanca">
+            <argument type="service" id="Shopware\Core\Checkout\Order\Aggregate\OrderTransaction\OrderTransactionStateHandler"/>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="language.repository"/>
+            <argument type="service" id="order.repository"/>
+            <argument type="service" id="router"/>
+
+            <tag name="shopware.payment.method.async"/>
+        </service>
+
+        <service id="PosVirtualeBanca\Controller\PosVirtualeBancaController" public="true">
+            <argument type="service" id="order.repository"/>
+            <argument type="service" id="router"/>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+
     </services>
 </container>
