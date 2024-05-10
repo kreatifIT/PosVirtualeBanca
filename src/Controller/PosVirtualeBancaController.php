@@ -106,6 +106,7 @@ class PosVirtualeBancaController extends StorefrontController
             $redirectUrl = $this->router->generate('frontend.home.page');
         }
 
+        $redirectUrl = str_replace('shop.', '', $redirectUrl);
         return $redirectUrl ? $this->redirect($redirectUrl) : $this->redirectToRoute('frontend.home.page');
     }
 }

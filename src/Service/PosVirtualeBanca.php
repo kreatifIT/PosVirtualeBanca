@@ -82,8 +82,8 @@ class PosVirtualeBanca implements AsynchronousPaymentHandlerInterface
         } elseif ($language->getName() == 'Italiano' || $language->getName() == 'Italienisch') {
             $langIsoCode = "IT";
         }
-        $urlBack = $this->getPaymentFinalizeUrl() . '?state=canceled&ORDERID=' . $order->getOrderNumber();
-        $urlDone = $this->getPaymentFinalizeUrl() . '?state=success&ORDERID=' . $order->getOrderNumber();
+        $urlBack = str_replace('shop.', '', $this->getPaymentFinalizeUrl() . '?state=canceled&ORDERID=' . $order->getOrderNumber());
+        $urlDone = str_replace('shop.', '', $this->getPaymentFinalizeUrl() . '?state=success&ORDERID=' . $order->getOrderNumber());
 
         $igfsCgInit               = new IgfsCgInit();
         $igfsCgInit->serverURL    = $settings['url'];
